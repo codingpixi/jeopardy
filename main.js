@@ -1,17 +1,21 @@
-fetch ('http://jservice.io/api/random?3')
-.then (response => response.json())
-.then(object => console.log(object))
-// .then (object => object.results)
+
+
+fetch ('http://jservice.io/api/random?count=3')
+.then(response => response.json())
+.then(object => console.log(object));
+// .then (object => object)
 // .then (resultsArr => resultsArr.map(getMoney))
 // .then (resultsArr => resultsArr.forEach(question => ))
 
 
+function onClicker(categories, answer, question, points) {
+  this.categories = categories;
+  this.answer = answer;
+  this.question = question;
+  this.points = points;
 
-
-
-// fetch('https://opentdb.com/api.php?amount=5&category=11&difficulty=hard&type=multiple')
-// .then(response => response.json())
-// .then (object => object.results)
-// .then (apiArr => apiArr.map(getData))//getData is being invoked by running it through getData
-// .then (apiArr => apiArr.forEach(question => question.display()));
-// .then(jsonData => console.log(jsonData))
+    this.isCorrect = function (event) {
+      let li = event.target;
+      let answerSpace = li.parentElement.nextSiblingElement
+    }
+}
