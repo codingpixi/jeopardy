@@ -11,31 +11,37 @@
 
 <body>
     <h1>This is Jeopardy</h1>
+    <p>Score <span id="scoreBoard"></span></p>
 
-    <!-- <section id="gameShow"></section> -->
+    <section id="showCategories"></section>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.6/handlebars.min.js"></script>
 
     <script id="tv" type="text/x-handlebars-template">
-
-        <article class="catOne">
-
-            <strong>{{text}}</strong>
-            <ul>
-                <li>{{answer}}</li>
-                {{#each choices}}
-                <li>{{this}}</li>{{/each}}<br>
-            </ul>
-            <span class="answer"></span>
+        <article class="boxOne">
+          <div class="showMeFirst">
+            <h1>{{category}}</h1>
+            <h3>{{points}}</h3>
+          </div>
         </article>
+    </script>
 
+    <section id="showQuestions"></section>
+    <script id="alexSaid" type="text/x-handlebars-template">
+      <article class="boxOne">
+        <div class="showMeFirst">
+          <h1>{{text}}</h1>
+          <h3>{{points}}</h3>
+          <input type="text" placeholder="Type answer here">
+          <button class="questionAnswer">Submit Answer</button>
+        </div>
 
-        <article class="catTwo">
-        </article>
-
-        <article class="catThree">
-        </article>
-</script>
-        <script src="main.js" type="text/javascript"></script>
+        <div class="getRight">
+          <span class="answer"></span>
+          <button class="nextQuestion">Next Question</button>
+        </div>
+      </article>
+    </script>
+    <script src="main.js" type="text/javascript"></script>
 
 </body>
 
