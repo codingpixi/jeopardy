@@ -3,14 +3,17 @@
 
 <head>
     <meta charset="utf-8">
-    <title>4.4 This is Jeopardy</title>
-    <link rel="stylesheet" src="main.css">
+    <title>4.4 This is JEOPARDY!</title>
+    <link rel="stylesheet" href="main.css">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
 
 </head>
 
 <body>
-    <h1>This is Jeopardy</h1>
+    <h1>This is..</h1>
+
+    <a href="http://fontmeme.com/jeopardy-font/"><img src="http://fontmeme.com/permalink/170410/21345e668d5269576ef896eb40641524.png" alt="jeopardy-font" border="0"></a>
+
     <p>Score <span id="scoreBoard"></span></p>
 
     <section id="showCategories"></section>
@@ -19,7 +22,7 @@
     <script id="tv" type="text/x-handlebars-template">
         <article class="boxOne">
           <div class="showMeFirst">
-            <h1>{{category}}</h1>
+            <h2>{{category}}</h2>
             <h3>{{points}}</h3>
           </div>
         </article>
@@ -29,7 +32,7 @@
     <script id="alexSaid" type="text/x-handlebars-template">
       <article class="boxOne">
         <div class="showMeFirst">
-          <h1>{{text}}</h1>
+          <h2>{{text}}</h2>
           <h3>{{points}}</h3>
           <input type="text" placeholder="Type answer here">
           <button class="questionAnswer">Submit Answer</button>

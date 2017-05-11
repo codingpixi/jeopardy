@@ -1,9 +1,9 @@
 fetch('http://jservice.io/api/random?count=3')
     .then(response => response.json())
     // .then(object => console.log(object))
-    .then (object => object.map(build))
+    .then (array => array.map(build)) //change object word to array
     .then (genericDisplay);//invoke function
-
+// console.log(Handlebars);
 function build (object){
   console.log(object);
   return new Question(object.question, object.answer, object.value, object.category.title);
@@ -22,7 +22,7 @@ function Question(text, answer, points, category) {
 
     this.categoryDisplay = function () {
       let source = document.querySelector('#tv').innerHTML;
-      let template = Handlebars.compile(source);
+      let template = Handlebars.compile(source);//method being invoked returns value of template
       let html = template(this);
       document.querySelector('#showCategories').insertAdjacentHTML('beforeend', html);
       document.querySelector('#showCategories article.boxOne:last-of-type div').addEventListener('click', this.questionShowsHere.bind(this));
@@ -40,7 +40,7 @@ function Question(text, answer, points, category) {
         let answerSpace = submitButton.previousElementSibling;
         let answerTyped = answerSpace.value;
         let rightOrWrongAnswer = document.querySelector('span.answer');
-        if (answerTyped.textContent === this.answer) {
+        if (answerTyped === this.answer) {
             rightOrWrongAnswer.textContent = "correct";
             score.push(this.points);
         } else {

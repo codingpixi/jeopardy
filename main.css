@@ -1,4 +1,21 @@
 * {
   font-family: 'Open Sans', sans-serif;
-  margin-left: 5rem;
+  margin-left: 3rem;
+  margin-right: 3rem;
 }
+
+body {
+  background: #f9f9f9;
+}
+
+div.showMeFirst{
+  border: solid 2px gray;
+  display: flex;
+}
+
+h1 {
+  color: #060CE9;
+  font-size: 6rem;
+  padding: 0 2rem;
+}
+/*060CE9*/
